@@ -1,0 +1,116 @@
+.gallery_vid {
+    width: 100%;
+    height: 30%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+}
+
+.MultiCarousel1 { 
+    float: left; 
+    overflow: hidden; 
+    width: 100%; 
+    position:relative; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.MultiCarousel1 .MultiCarousel-inner1 { 
+    transition: 1s ease all; 
+    float: left; 
+}
+
+.MultiCarousel1 .MultiCarousel-inner1 .item1 { 
+    float: left;
+}
+
+.MultiCarousel1 .MultiCarousel-inner1 .item1 > div { 
+    padding:10px; 
+    margin:10px; 
+    background:black;
+}
+
+.MultiCarousel1 .leftLst1, .MultiCarousel1 .rightLst1 { 
+    position:absolute; 
+    border-radius:50%;
+    top:calc(50% - 20px); 
+}
+
+.MultiCarousel1 .leftLst1 { 
+    left:0; 
+    background: none;
+    border-color: white;
+}
+.MultiCarousel1 .rightLst1 { 
+    right:0; 
+    background: none;
+    border-color: white;
+}
+    
+.MultiCarousel1 .leftLst1.over, .MultiCarousel1 .rightLst1.over { 
+    pointer-events: none; 
+    background: none;
+    border-color: #797979;
+    color: #797979;
+}
+
+.MultiCarousel2 { 
+    float: left; 
+    overflow: hidden; 
+    width: 100%; 
+    position:relative; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.MultiCarousel2 .MultiCarousel-inner2 { 
+    transition: 1s ease all; 
+    float: left; 
+}
+
+.MultiCarousel2 .MultiCarousel-inner2 .item2 { 
+    float: left;
+}
+
+.MultiCarousel2 .MultiCarousel-inner2 .item2 > div { 
+    padding:10px; 
+    margin:10px; 
+    background:black;
+}
+
+.MultiCarousel2 .leftLst2, .MultiCarousel2 .rightLst2 { 
+    position:absolute; 
+    border-radius:50%;
+    top:calc(50% - 20px); 
+}
+
+.MultiCarousel2 .leftLst2 { 
+    left:0; 
+    background: none;
+    border-color: white;
+}
+.MultiCarousel2 .rightLst2 { 
+    right:0; 
+    background: none;
+    border-color: white;
+}
+    
+.MultiCarousel2 .leftLst2.over, .MultiCarousel2 .rightLst2.over { 
+    pointer-events: none; 
+    background: none;
+    border-color: #797979;
+    color: #797979;
+}
+
+.gallery_img {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    
+    .gallery_vid {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

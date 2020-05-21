@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Packages and Calsses - BYG</title>
+        <meta name="description" content="Packages and Calsses - BYG">
+        <link rel="icon" href="images/browser_tab_logo-01.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <link rel="stylesheet" href="stylesheets/pandc.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="no-gutter header_container">
+            <p class='page_head'>PACKAGES AND CLASSES</p>
+            <div class='container-fluid' id="header">
+                <div class='row align-items-center' id='header_content'>
+                    <div class='col-lg-3 col-sm-8 col-6 logo_container'>
+                        <img src="images/logo-byg-01.png" id="logo" alt="logo">
+                    </div>
+                    <div class='col-md-4 col-sm-4 col-6 text-right menu_icon'>
+                        <a href="javascript:void(0);" style="font-size:15px;" class="menu_icon" onclick="myFunction()">&#9776;</a>
+                    </div>
+                    <li style="float:right" class='topnav col-lg-9 text-right' id="menu">
+                        <a class='text_lg flink' id='home' href='home.html'>Home</a>
+                        <a class='text_lg flink' id='gallery' href='gallery.html'>Gallery</a> 
+                        <a class='text_lg flink' id='packclass' href='pandc.html'>Packages &amp; Classes</a>
+                        <a class='text_lg flink' id='blog' href='blog.html'>Blog</a>
+                        <a class='text_lg flink' id='contact' href='contact.html'>Contact Us</a>
+                    </li>
+                    <!--div style="float:right" class='col-lg-1 col-sm-2  col-2 text-center' id='search_icon_container'>
+                        <img src="images/search_icon-01.png" id="search_icon" alt="search icon">
+                    </div-->
+                </div>
+            </div>
+        </div>
+        
+        <div class="no-gutter body_container">
+            <div class='no-gutters'>
+                <img src="images/banners/banner-pc.jpg" class='banner phremove' alt="page banner">
+            </div>
+        </div>
+        
+        <div class="space_big"></div>
+        <div ng-app="app" ng-controller='myCtrl'
+     ng-init="limit = 3 ; packages=[
+{name:'Zumba Package',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'5000',note:'This Package is for Zumba'},{name:'Gym Membership',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},
+{name:'Yoga Package',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},{name:'Golden Membership',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},{name:'Beginner Membership',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'}];
+              
+              timings=[[{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special2',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special3',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special4',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special5',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special6',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special7',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}]]">
+            
+        <div class='container place_container'>
+            <div class="row">
+                <button class='col place_button selected' ng-click="packages=[
+{name:'Zumba Package',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'5000',note:'This Package is for Zumba'},{name:'Gym Membership',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},
+{name:'Yoga Package',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},{name:'Golden Membership',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},{name:'Beginner Membership',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'}];
+              
+              timings=[[{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special2',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special3',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special4',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special5',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special6',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Zumba Special7',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}]];
+                time=timings[0]">Koramangala</button>
+                
+                
+                <button class='col place_button' ng-click="packages=[
+{name:'Zumba Package2',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'5000',note:'This Package is for Zumba'},{name:'Gym Membership2',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},
+{name:'Yoga Package2',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},{name:'Golden Membership2',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},{name:'Beginner Membership2',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'}];
+              
+              timings=[[{time:'06:00 - 07:00 AM',class:'Yoga Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Yoga Special2',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Yoga Special3',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Yoga Special4',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Yoga Special5',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Yoga Special6',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Yoga Special7',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}]]
+                ;time=timings[0]">Indiranagar</button>
+                
+                <button class='col place_button' ng-click="packages=[
+{name:'Zumba Package3',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'5000',note:'This Package is for Zumba'},{name:'Gym Membership3',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},
+{name:'Yoga Package3',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},{name:'Golden Membership3',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'},{name:'Beginner Membership3',variant:['variant1','variant2'],day:['day1','day2'],oldPrice:'1200',newPrice:'3000',note:'This Package is for Zumba'}];
+              
+              timings=[[{time:'06:00 - 07:00 AM',class:'Gold Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Gold Special2',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Gold Special3',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Gold Special4',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Gold Special5',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Gold Special6',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}],
+              [{time:'06:00 - 07:00 AM',class:'Gold Special7',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'},{time:'06:00 - 07:00 AM',class:'Zumba Special',trainer:'Puneet Kumar'}]];
+            time=timings[0]">HSR Layout</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" id='package-head'>
+                <div class='underline packHead' style="">
+                    <p class='ht_white_sm' style="display:inline">OUR </p>
+                    <p class='ht_red_sm' style="display:inline">PACKAGES</p>
+                </div>
+            </div>
+            <div class="row packages-all-container" id="packages-all-container" >
+                <div class="col-lg-4 col-md-6 col-12" ng-repeat="x in packages | limitTo : limit">
+                    <div class="col-11 package-container">
+                        <div class="pHead col-12">
+                            <p class="pHead_text">{{x.name}}</p>
+                        </div>
+                        <select class="custom-select col-11 select_button">
+                            <option selected>Select Variant</option>
+                            <option ng-repeat="item in x.variant">{{item}}</option>
+                        </select>
+                        <select class="custom-select col-11 select_button">
+                            <option selected>60 Days</option>
+                            <option ng-repeat="item in x.day">{{item}}</option>
+                        </select>
+                        <div class="row">
+                            <div class="col-12 price">
+                                <div class="col-5 inline-div align-top">
+                                    <p class="text_note align-top"><strong>Price</strong></p>
+                                </div>
+                                <div class="col-6 inline-div text-right">
+                                    <p class="old_price">&#8377;{{x.oldPrice}}</p>
+                                    <p class="new_price">&#8377;{{x.newPrice}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p class="text_note inline-div"><strong>Notes </strong></p>
+                            <p class="text_note inline-div">&nbsp&nbsp&nbsp{{x.note}}</p>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary buy_now mb-2">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-right gutter" ng-click="limit = showpkgs(limit,x.length)">
+                <div class="col-12 see_more">
+                    <p class='text_red' id='more_pkg'>SEE MORE</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container no-gutter">
+            <div class="row" id='package-head'>
+                <div class='underline stWorkout_head'>
+                    <p class='ht_red_sm' style="display:inline">START WORKOUT </p>
+                    <p class='ht_white_sm' style="display:inline">TODAY</p>
+                </div>
+            </div>
+            <div class='row dates_row'>
+                <button class='col date_button selected first' ng-click="time=timings[0]">25 SEP</button>
+                <button class='col date_button' ng-click="time=timings[1]">26 SEP</button>
+                <button class='col date_button' ng-click="time=timings[2]">27 SEP</button>
+                <button class='col date_button' ng-click="time=timings[3]">28 SEP</button>
+                <button class='col date_button' ng-click="time=timings[4]">29 SEP</button>
+                <button class='col date_button' ng-click="time=timings[5]">30 SEP</button>
+                <button class='col date_button' ng-click="time=timings[6]">31 SEP</button>
+            </div>
+            <div class='container class_dets no-gutter'>
+                <table class="col text-center" ng-init="time=timings[0]">
+                    <tr ng-repeat="t in time">
+                        <td class='text_white'>{{t.time}}</td>
+                        <td class='row table_vcenter'>
+                            <div class="col-md-6"><p class='text_red-bold'>{{t.class}}</p></div>
+                            <div class="col-md-6"><p class='text_lg'  style="display:inline">Trainer:</p><p  style="display:inline" class='text_white'> {{t.trainer}}</p></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+        
+        <div class='container-fluid' id="footer">
+            <div id='footer_content'>
+                <div class='row  justify-content-center' id='footer_links'>
+                    <div class='col-md-8 text-center'>
+                        <div class='inline-div'>
+                            <a class='text_lg flink' href='home.html'>Home</a>
+                        </div>
+                        <div class='inline-div'>
+                            <a class='text_lg flink' href='gallery.html'>Gallery</a> 
+                        </div>
+                        <div class='inline-div'>
+                            <a class='text_lg flink' href='pandc.html'>Packages &amp; Classes</a>
+                        </div>
+                        <div class='inline-div'>
+                            <a class='text_lg flink' href='blog.html'>Blog</a>
+                        </div>
+                        <div class='inline-div'>
+                            <a class='text_lg flink' href='contact.html'>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='row  justify-content-center' id='footer_sm_links'>
+                    <div class='col-md-1 col-sm-2 col-3 text-center'>
+                        <a href=''><img src='images/sm-icons/sm-buttons-byg-01.png' alt="facebook link"  data-src="images/sm-icons/sm-buttons-byg-01.png" data-hover="images/sm-icons/sm-buttons-byg-10.png" class="footer-sm"></a>
+                    </div>
+                    <div class='col-md-1 col-sm-2 col-3 text-center'>
+                        <a href=''><img src='images/sm-icons/sm-buttons-byg-02.png' alt="twitter link"  data-src="images/sm-icons/sm-buttons-byg-02.png" data-hover="images/sm-icons/sm-buttons-byg-09.png" class="footer-sm"></a>
+                    </div>
+                    <div class='col-md-1 col-sm-2 col-3 text-center'>
+                        <a href=''><img src='images/sm-icons/sm-buttons-byg-03.png' alt="linkedin link"  data-src="images/sm-icons/sm-buttons-byg-03.png" data-hover="images/sm-icons/sm-buttons-byg-08.png" class="footer-sm"></a>
+                    </div>
+                    <div class='col-md-1 col-sm-2 col-3 text-center'>
+                        <a href=''><img src='images/sm-icons/sm-buttons-byg-06.png' alt="youtube link" data-src="images/sm-icons/sm-buttons-byg-06.png" data-hover="images/sm-icons/sm-buttons-byg-07.png" class="footer-sm"></a>
+                    </div>
+                </div>
+                <div class='row  justify-content-center'>
+                    <p class='text_lg'>© 2017 Book Your Game BYG</p>
+                </div>
+                <div class='row  justify-content-center'>
+                        <div class='col-md-2 text-center'>
+                            <p class='text_dg'>Terms &amp; Conditions </p>
+                        </div>
+                        <!--div class='w-2 text-center' id='line'></div-->
+                        <div class='col-md-2 text-center' id='policy_text'>
+                            <p class='text_dg'>Privacy Policy </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+<!---------------------------------buy now modal------------------------------------------>  
+        
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                    <div class="red-bg">
+                         <p class="modal_close"><img src="images/close_icon_white-01.png"  class="close_icon"></p>
+                    </div>
+                    <div class="white-bg">
+                        <div class='col-12'>
+                             <form class='contact_form' method="post" name="myemailform" action="subscribe_form.php">
+                             <div id="form-messages"></div>
+                                <div class="modal_space_form"></div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 usr_det">
+                                        <p class="text_red-bold text-center">USER DETAILS</p>
+                                        <input type='text' id='name' name='name' placeholder='Name' class='buy_single_line' required>
+                                        <input type='text' id='phone' name='phone' placeholder='Phone' class='buy_single_line' required>
+                                        <input type='text' id='email' name='email' placeholder='Email' class='buy_single_line' required>
+                                        <div class="row gender_container pb-3">
+                                            <p class="text_lg_sm pr-3">Gender :</p>
+                                            <input type="radio" class="male" name="gender" value="male" checked><p class="text_dg_sm"> Male</p><br>
+                                            <input type="radio" class="female" name="gender" value="female"> <p class="text_dg_sm"> Female</p><br>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <p class="text_red-bold text-center">PACKAGE DETAILS</p>
+                                        <div class='pkgdet_container pt-3'>
+                                            <div class="row pb-2">
+                                                <p class="text_lg_sm col-3">Name</p>
+                                                <p class="col-9 text_dg_sm">Zumba Batch</p>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <p class="text_lg_sm col-3">Details</p>
+                                                <p class="col-9 text_dg_sm">12 Sessions for 1 month @ Rs. 3630</p>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <p class="text_lg_sm col-3">Start Date</p>
+                                                <input type="date" class='date col-8 ml-3 mb-3 text_dg_sm' name="st_date"><br>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <p class="text_lg_sm col-3">End Date</p>
+                                                <p class="col-9 text_dg_sm">29/6/2018</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>  
+                         
+                    </div>
+                    <div class="red-bg">
+                         <input type='submit' class='modal_submit' value="MAKE PAYMENT">
+                    </div>
+            </div>
+        </div>
+        
+    </body>
+ 
+<!----------------------------------------script------------------------------------------>
+    
+    <script> 
+        function myFunction() {
+            var x = document.getElementById("menu");
+            if (x.className === "topnav col-lg-9 text-right") {
+                x.className = "topnav col-lg-9 responsive";
+            } else {
+                x.className = "topnav col-lg-9 text-right";
+            }
+        }
+        $(function(){
+          $('a').each(function() {
+                if ($(this).prop('href') == window.location.href) {
+                  $(this).addClass('current');
+                }
+                if(window.location.href.indexOf("home") == -1) {
+                        $('#logo').addClass('hide_phone');
+                }
+          });
+        });
+        $('.date_button').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+        });
+        $('.place_button').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+        $(".date_button:first").addClass('selected').siblings().removeClass('selected');
+        });
+        
+        angular.module('app', [])
+        .controller('myCtrl', ['$scope', function($scope) {
+            $scope.showpkgs = function(limit,len) {
+                var text = document.getElementById('more_pkg');
+                if(limit==len){
+                    text.innerHTML = "SEE MORE";
+                    return 3;
+                }
+                else {
+                    text.innerHTML = "SEE LESS";
+                    return len;
+                }
+            };
+        }]);
+
+        
+        $(document).ready(function() {
+            var modal = document.getElementById('myModal');
+            var span = document.getElementsByClassName("modal_close")[0];
+            
+            $(".buy_now").click(function(){
+                modal.style.display = "block";
+            });
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        
+        $(function(){
+            $(".footer-sm").mouseover(function () {
+              $(this).attr('src', $(this).data("hover"));
+            }).mouseout(function () {
+              $(this).attr('src', $(this).data("src"));
+            });
+        });
+    </script> 
+    
+</html>
